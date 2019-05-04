@@ -2,13 +2,13 @@
 We can also do both the operations of retreiving data via value and then adding a reference through # by help of an angular directive called ng-model which helps in 2-way data binding-->
 <mat-card>
     <mat-form-field>
-        <textarea matInput type="text" [(ngModel)] = "enteredTitle"></textarea>
+        <textarea matInput type="text" required [(ngModel)] = "enteredTitle" ></textarea>
       </mat-form-field>
     <mat-form-field>
-      <textarea matInput rows="6" [(ngModel)] = "enteredContent"></textarea>
+      <textarea matInput rows="6" required [(ngModel)] = "enteredContent" ></textarea>
     </mat-form-field>
 <!-- Event binding of Angular that allows to listen to events in a declarative way-->
-<button mat-raised-button  color = "primary" (click)="onAddPost()">Save Button</button>
+<button mat-raised-button  color = "primary" (click)="onAddPost()" *ngIf>Save Button</button>
 </mat-card>
 
 <!-- String interpolation -->
